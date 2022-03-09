@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int numberofConsecutiveRanges=0;
+
 void sortArray(int samplearray[], int samplesize){
  int i, j, a;
  for (i = 0; i < samplesize; ++i){
@@ -14,7 +16,7 @@ void sortArray(int samplearray[], int samplesize){
  } 
  
  
- int getcountofcontinousrange(int samplearray[],int samplesize ){
+ /*int getcountofcontinousrange(int samplearray[],int samplesize ){
   
   int diff ;
   int continuouscount =1;
@@ -32,5 +34,25 @@ void sortArray(int samplearray[], int samplesize){
         }
     }
   return continuouscount;
+}*/
+
+
+void sortRange(int samplearray[], int samplesize){
+
+int i;
+int lowerindex, upperindex;
+for (i=0; i < samplesize)
+ {
+ lowerindex =i;
+ 
+ while (((samplearray[i+1] - samplearray[i] ==0)||(samplearray[i+1] - samplearray[i] ==1))&&(i < samplesize){
+ i++;
+ }
+ upperindex =i;
+ determineRangeAndCount(lowerindex, upperindex);
+ numberofConsecutiveRanges++;
+ i++;
+ }
 }
-© 2022 G
+
+determineRangeAndCount(int lowerindex,int upperindex);
