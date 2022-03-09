@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+void sortArray(int samplearray[], int samplesize){
+ int i, j, a;
+ for (i = 0; i < samplesize; ++i){
+      for (j = i + 1; j < samplesize; ++j){
+         if (samplearray[i] > samplearray[j]){
+            a = samplearray[i];
+            samplearray[i] = samplearray[j];
+            samplearray[j] = a;
+         }
+      }
+   }
+ } 
+ 
+ 
+ int getcountofcontinousrange(int samplearray[],int samplesize ){
+  
+  int diff ;
+  int continuouscount =1;
+ int lowerrange = samplearray[0];
+ 
+  for(i=0; i<= samplesize ;i++){
+     diff = samplearray[i+1]- samplearray[i];
+     if((diff == 0) || (diff == 1) 
+        {
+          continuouscount++;
+        }
+        else
+        {
+          continuouscount = 1;
+        }
+    }
+  return continuouscount;
+}
+© 2022 G
