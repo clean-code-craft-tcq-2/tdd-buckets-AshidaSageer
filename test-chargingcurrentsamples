@@ -1,0 +1,8 @@
+#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+
+#include "test/catch.hpp"
+
+int samples[]={4,5};
+TEST_CASE("checks range and number of charging current samples") {
+  REQUIRE(monitorChargingCurrent(samples) == "4-5, 2" );
+  }
